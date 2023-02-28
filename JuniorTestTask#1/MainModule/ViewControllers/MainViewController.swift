@@ -47,3 +47,9 @@ extension MainViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
+extension MainViewController {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        indexPath.row == 2 ? UITableView.automaticDimension : 44
+    }
+}

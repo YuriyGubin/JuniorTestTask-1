@@ -50,7 +50,8 @@ extension MainTableViewCell {
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             nameLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.35),
             
-            valueLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            valueLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            valueLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
             valueLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             valueLabel.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 10)
         ])
