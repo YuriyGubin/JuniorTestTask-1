@@ -1,13 +1,13 @@
 //
-//  MainViewController.swift
+//  EditingTableViewController.swift
 //  JuniorTestTask#1
 //
-//  Created by Yuriy on 27.02.2023.
+//  Created by Yuriy on 28.02.2023.
 //
 
 import UIKit
 
-final class MainViewController: UITableViewController {
+class EditingTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +21,10 @@ final class MainViewController: UITableViewController {
 
     private func setupViews() {
         title = "Просмотр"
-        view.backgroundColor = .white
+        view.backgroundColor = .red
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: "Редактировать",
+            title: "Сохранить",
             style: .plain,
             target: self,
             action: #selector(editingTapped)
@@ -37,7 +37,7 @@ final class MainViewController: UITableViewController {
 }
 
 // MARK: UITableViewDataSource
-extension MainViewController {
+extension EditingTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Resourse.NameField.allCases.count
@@ -59,8 +59,9 @@ extension MainViewController {
 }
 
 // MARK: - UITableViewDelegate
-extension MainViewController {
+extension EditingTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         indexPath.row == 2 ? UITableView.automaticDimension : 44
     }
 }
+
