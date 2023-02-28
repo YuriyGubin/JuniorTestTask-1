@@ -15,7 +15,7 @@ class EditingTableViewController: UITableViewController {
         
         tableView.register(
             MainTableViewCell.self,
-            forCellReuseIdentifier: MainTableViewCell.idMainTableViewCell
+            forCellReuseIdentifier: TextVeiwTableViewCell.idTextViewCell
         )
     }
 
@@ -45,9 +45,9 @@ extension EditingTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: MainTableViewCell.idMainTableViewCell,
+            withIdentifier: TextVeiwTableViewCell.idTextViewCell,
             for: indexPath
-        ) as? MainTableViewCell else {
+        ) as? TextVeiwTableViewCell else {
             return UITableViewCell()
         }
         
