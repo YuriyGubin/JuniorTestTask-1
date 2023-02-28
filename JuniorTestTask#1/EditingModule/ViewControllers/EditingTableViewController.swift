@@ -20,8 +20,8 @@ class EditingTableViewController: UITableViewController {
     }
 
     private func setupViews() {
-        title = "Просмотр"
-        view.backgroundColor = .red
+        title = "Редактирование"
+        view.backgroundColor = .white
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "Сохранить",

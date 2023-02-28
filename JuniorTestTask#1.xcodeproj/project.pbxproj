@@ -15,6 +15,7 @@
 		6A9B647029AD2D36005C12A7 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9B646F29AD2D36005C12A7 /* MainTableViewCell.swift */; };
 		6A9B647429AD3049005C12A7 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9B647329AD3049005C12A7 /* UIView + Extensions.swift */; };
 		6A9B647829AE70B0005C12A7 /* EditingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9B647729AE70B0005C12A7 /* EditingTableViewController.swift */; };
+		6A9B647C29AE7581005C12A7 /* TextVeiwTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9B647B29AE7581005C12A7 /* TextVeiwTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		6A9B646F29AD2D36005C12A7 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		6A9B647329AD3049005C12A7 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 		6A9B647729AE70B0005C12A7 /* EditingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingTableViewController.swift; sourceTree = "<group>"; };
+		6A9B647B29AE7581005C12A7 /* TextVeiwTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextVeiwTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		6A9B647529AE7063005C12A7 /* EditingModule */ = {
 			isa = PBXGroup;
 			children = (
+				6A9B647929AE7546005C12A7 /* Views */,
 				6A9B647629AE707A005C12A7 /* ViewControllers */,
 			);
 			path = EditingModule;
@@ -151,6 +154,22 @@
 				6A9B647729AE70B0005C12A7 /* EditingTableViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6A9B647929AE7546005C12A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6A9B647A29AE7552005C12A7 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6A9B647A29AE7552005C12A7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6A9B647B29AE7581005C12A7 /* TextVeiwTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +244,7 @@
 			files = (
 				6A9B647429AD3049005C12A7 /* UIView + Extensions.swift in Sources */,
 				6A9B646D29AD2AE4005C12A7 /* Resourses.swift in Sources */,
+				6A9B647C29AE7581005C12A7 /* TextVeiwTableViewCell.swift in Sources */,
 				6A9B647829AE70B0005C12A7 /* EditingTableViewController.swift in Sources */,
 				6A9B645829AD2286005C12A7 /* MainTableViewController.swift in Sources */,
 				6A9B647029AD2D36005C12A7 /* MainTableViewCell.swift in Sources */,
