@@ -8,7 +8,7 @@
 import UIKit
 
 final class TextVeiwTableViewCell: UITableViewCell {
-
+    
     private let nameLabel = UILabel()
     
     static var idTextViewCell = "idTextViewCell"
@@ -25,8 +25,8 @@ final class TextVeiwTableViewCell: UITableViewCell {
     }
     
     private func setupViews() {
+        selectionStyle = .none
         addView(nameLabel)
-        
     }
     
     public func configure(name: String) {
