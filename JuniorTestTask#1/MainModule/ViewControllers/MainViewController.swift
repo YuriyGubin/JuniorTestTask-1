@@ -13,7 +13,10 @@ final class MainViewController: UITableViewController {
         super.viewDidLoad()
         setupViews()
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(
+            MainTableViewCell.self,
+            forCellReuseIdentifier: MainTableViewCell.idMainTableViewCell
+        )
     }
 
     private func setupViews() {
@@ -26,12 +29,20 @@ final class MainViewController: UITableViewController {
 extension MainViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        Resourse.NameField.allCases.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Test"
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: MainTableViewCell.idMainTableViewCell,
+            for: indexPath
+        ) as? MainTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        let nameField = Resourse.NameField.allCases[indexPath.row].rawValue
+        cell.configure(name: nameField)
+       
         return cell
     }
 }
