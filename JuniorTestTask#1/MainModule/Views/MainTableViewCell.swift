@@ -9,9 +9,13 @@ import UIKit
 
 class MainTableViewCell: UITableViewCell {
     
-    private let nameLabel: UILabel = {
+    private let nameLabel = UILabel()
+    
+    private let valueLabel: UILabel = {
         let label = UILabel()
-        
+        label.textAlignment = .right
+        label.numberOfLines = 0
+        label.text = "Test"
         return label
     }()
     
@@ -30,6 +34,7 @@ class MainTableViewCell: UITableViewCell {
     
     private func setupViews() {
         addView(nameLabel)
+        addView(valueLabel)
     }
     
     public func configure(name: String) {
@@ -43,7 +48,11 @@ extension MainTableViewCell {
         NSLayoutConstraint.activate([
             nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            nameLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.35)
+            nameLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.35),
+            
+            valueLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            valueLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            valueLabel.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 10)
         ])
     }
 }
