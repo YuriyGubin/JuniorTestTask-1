@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  MainTableViewController.swift
 //  JuniorTestTask#1
 //
 //  Created by Yuriy on 27.02.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MainViewController: UITableViewController {
+final class MainTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +32,13 @@ final class MainViewController: UITableViewController {
     }
     
     @objc private func editingTapped() {
-        
+        let editingTableViewController = EditingTableViewController()
+        navigationController?.pushViewController(editingTableViewController, animated: true)
     }
 }
 
 // MARK: UITableViewDataSource
-extension MainViewController {
+extension MainTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Resourse.NameField.allCases.count
@@ -59,7 +60,7 @@ extension MainViewController {
 }
 
 // MARK: - UITableViewDelegate
-extension MainViewController {
+extension MainTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         indexPath.row == 2 ? UITableView.automaticDimension : 44
     }
